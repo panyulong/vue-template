@@ -11,7 +11,7 @@ export default {
   },
   data () {
     return {
-        src: '/img/error-page/error-500.svg'
+      src: require(`@/assets/img/error-page/error-500.svg`)
     }
   }
 }

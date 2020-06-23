@@ -4,12 +4,13 @@ import router from './router'
 import store from './store'
 import './permits.js' 
 
+import 'normalize.css'
+
 import axios from 'axios';
 Vue.prototype.$axios = axios;
 
 Vue.config.productionTip = false
 
-console.log(router)
 new Vue({
   router,
   store,

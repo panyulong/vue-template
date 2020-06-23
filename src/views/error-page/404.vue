@@ -11,8 +11,11 @@ export default {
   },
   data () {
     return {
-      src: '/img/error-page/error-404.svg'
+      src: require(`@/assets/img/error-page/error-404.svg`)
     }
+  },
+  mounted(){
+    
   }
 }
 </script>

@@ -11,7 +11,6 @@ const ConfigEnv = {
         pro:'http://3',
     }
 }
-console.log(process.env)
 const ProxyEnvironment = (variables) =>{
     let config = {};
     let env = process.env.VUE_APP_MODE || process.env.NODE_ENV;

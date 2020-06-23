@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 
  const createRouter = () => new VueRouter({
     // mode:'history',
-    // base:process.env.BASE_URL,
+    base:process.env.BASE_URL,
     routes: [
        ...base,
         { path: '*',  name:'找不到页面', component: noFound }

@@ -1,9 +1,11 @@
 const path = require('path')
 const webpack = require('webpack')
 const resolve = dir=> path.join(__dirname,dir)
+
+let baseUrl = '/vue-template/'
 module.exports = {
   // 基本路径
-  publicPath: '/',
+  publicPath: baseUrl,
   // 输出文件目录
   outputDir: 'pan_'+process.env.VUE_APP_MODE.trim(),
   // eslint-loader 是否在保存的时候检查
