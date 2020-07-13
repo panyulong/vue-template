@@ -1,8 +1,11 @@
 const path = require('path')
 const webpack = require('webpack')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer') //打包后可视化文件大小
+const CircularDependencyPlugin = require('circular-dependency-plugin') //是否循环引用会报错
+const TerserPlugin = require('terser-webpack-plugin') //代码压缩，生产环境自动删除console
 const resolve = dir=> path.join(__dirname,dir)
 
-let baseUrl = '/vue-template/'
+const baseUrl = process.env.NODE_ENV === 'production' ? './': '/'
 module.exports = {
   // 基本路径
   publicPath: baseUrl,
@@ -28,6 +31,41 @@ module.exports = {
           }
         }
     },
+  },
+  configureWebpack: (config) => {
+    if (process.env.NODE_ENV === 'production') {
+      // 插件
+      config.plugins.push(
+        new BundleAnalyzerPlugin(),
+        new TerserPlugin({
+          cache:true,
+          parallel:true,
+          sourceMap:true,
+          terserOptions:{
+            compress: {
+                drop_debugger: true,
+                drop_console: true,
+            },
+        }
+      }),
+      // new CircularDependencyPlugin({
+      //   exclude: /a\.js|node_modules/,
+      //   failOnError: true,
+      //   cwd: process.cwd()
+      // }),
+    )         
+    }
+    // Loader-rules为空或没有匹配到打包会报错
+    config.module.rules.push(
+       //图片压缩
+      {
+      test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+      use:[{
+          loader: 'image-webpack-loader',
+          options: {bypassOnDebug: true}
+      }]
+      }
+    )
   },
   // 第三方插件配置
   pluginOptions: {

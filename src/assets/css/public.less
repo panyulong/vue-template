@@ -1,3 +1,8 @@
 @import './baseColor.less';
 
-@imgUrl:'/vue-template/'
+// @imgUrl:'/vue-template/';
+
+.bgImage(@url){
+    background: url("~@/assets/img/@{url}") no-repeat center;
+    background-size:100% 100%;
+}

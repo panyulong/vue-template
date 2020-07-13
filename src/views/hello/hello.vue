@@ -6,6 +6,7 @@
 
 <script>
 import {mapGetters,mapActions,mapMutations} from 'vuex'
+// import img1 from '@/assets/img/weddingTemp1/1.jpg' //js引入图片，css引入背景图片可以.bgImage(url)
 export default {
   computed:{
       ...mapGetters({

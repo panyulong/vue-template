@@ -21,7 +21,7 @@ const mutations = {
 
 const actions = {
         // 前端退出
-        fedLogout({commit}){
+          fedLogout({commit}){
             commit('setUserId', '')
             removeToken()
             console.log('未登录，或登录失效，请登录')
