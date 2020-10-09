@@ -1,8 +1,10 @@
 @import './baseColor.less';
+@import './vant.less';
 
-// @imgUrl:'/vue-template/';
-
-.bgImage(@url){
-    background: url("~@/assets/img/@{url}") no-repeat center;
-    background-size:100% 100%;
+//背景图片
+.bgImage(@url, @bgsz: unset) {
+    background-image: url("~@/assets/img/@{url}");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: @bgsz;
 }

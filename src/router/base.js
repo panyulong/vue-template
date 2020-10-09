@@ -1,20 +1,11 @@
-const home = (resolve)=> require(['@/views/home/home'],resolve)
-const hello = (resolve)=> require(['@/views/hello/hello'],resolve)
-export default [
-    {
+const home = (resolve) => require(['@/views/home/home'], resolve);
+export default [{
         path: '/',
-        redirect: '/home/hello'
+        redirect: '/home'
     },
     {
-        path:'/home',
-        name:'home',
-        component:home,
-        children:[
-            {
-                path: '/home/hello',
-                name:'欢迎页',
-                component: hello,
-            },
-        ]
-    }
+        path: '/home',
+        name: '首页',
+        component: home,
+    },
 ]

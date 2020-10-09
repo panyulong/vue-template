@@ -2,9 +2,10 @@
   "name": "vue",
   "author": "panyulong",
   "version": "0.1.0",
-  "description": "模板",
+  "description": "评价系统",
   "scripts": {
     "serve": "set VUE_APP_MODE=dev&& vue-cli-service serve",
+    "serve:alpha": "set VUE_APP_MODE=alpha&& vue-cli-service serve",
     "build:alpha": "set VUE_APP_MODE=alpha&& vue-cli-service build",
     "build:pro": "set VUE_APP_MODE=pro&& vue-cli-service build",
     "build": "set VUE_APP_MODE=alpha&& vue-cli-service build && set VUE_APP_MODE=pro&& vue-cli-service build"
@@ -12,17 +13,13 @@
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^2.6.5",
-    "cssnano": "^4.1.10",
     "js-cookie": "^2.2.1",
+    "lib-flexible": "^0.3.2",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
-    "postcss-aspect-ratio-mini": "^1.0.1",
-    "postcss-cssnext": "^3.1.0",
-    "postcss-import": "^12.0.1",
-    "postcss-px-to-viewport": "^1.1.0",
-    "postcss-url": "^8.0.0",
-    "postcss-viewport-units": "^0.1.6",
-    "postcss-write-svg": "^3.0.1",
+    "postcss-px2rem": "^0.3.0",
+    "qs": "^6.9.4",
+    "vant": "^2.10.8",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1",
@@ -31,14 +28,11 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.6.0",
     "@vue/cli-service": "^3.6.0",
-    "circular-dependency-plugin": "^5.2.0",
     "image-webpack-loader": "^6.0.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "style-resources-loader": "^1.3.3",
-    "terser-webpack-plugin": "^3.0.6",
     "vue-cli-plugin-style-resources-loader": "^0.1.4",
-    "vue-template-compiler": "^2.5.21",
-    "webpack-bundle-analyzer": "^3.8.0"
+    "vue-template-compiler": "^2.5.21"
   }
 }
