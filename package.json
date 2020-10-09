@@ -1,8 +1,8 @@
 {
   "name": "vue",
   "author": "panyulong",
-  "version": "0.1.0",
-  "description": "评价系统",
+  "version": "1.0.0",
+  "description": "Vue模板",
   "scripts": {
     "serve": "set VUE_APP_MODE=dev&& vue-cli-service serve",
     "serve:alpha": "set VUE_APP_MODE=alpha&& vue-cli-service serve",
