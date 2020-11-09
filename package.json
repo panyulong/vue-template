@@ -6,6 +6,7 @@
   "scripts": {
     "serve": "set VUE_APP_MODE=dev&& vue-cli-service serve",
     "serve:alpha": "set VUE_APP_MODE=alpha&& vue-cli-service serve",
+    "serve:pro": "set VUE_APP_MODE=pro&& vue-cli-service serve",
     "build:alpha": "set VUE_APP_MODE=alpha&& vue-cli-service build",
     "build:pro": "set VUE_APP_MODE=pro&& vue-cli-service build",
     "build": "set VUE_APP_MODE=alpha&& vue-cli-service build && set VUE_APP_MODE=pro&& vue-cli-service build"
